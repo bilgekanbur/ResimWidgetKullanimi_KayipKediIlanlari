@@ -31,6 +31,7 @@ class ButonTurleri extends StatelessWidget {
                   if (states.contains(WidgetState.hovered)) {
                     return Colors.amber;
                   }
+                  return null;
                 }),
               ),
               label: Text("TEXT BUTTON WİTH İCON"),

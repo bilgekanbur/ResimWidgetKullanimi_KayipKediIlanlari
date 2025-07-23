@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/buton_turleri.dart';
+import 'package:flutter_application_3/dropdown_popup_menu.dart';
 import 'package:flutter_application_3/resim_widgetler.dart';
+
 
 void main() {
   debugPrint("main methodu tetiklendi");
@@ -27,13 +29,13 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.pink,
       ),
-      home: ResimWidgetler(),
+      home:DropdownPopupMenu(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({super.key});
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
