@@ -6,8 +6,9 @@ class ResimWidgetler extends StatelessWidget {
       "https://hips.hearstapps.com/hmg-prod/images/large-cat-breed-maine-coon-1553270773.jpg";
   var url2 =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt8BCFzn7K_vZ86SAXyRh7f7tYjd4al7lL7tCqWaVR7SMk_jz6EyuFZjxDj5SE_TOGDic&usqp=CAU0";
-  
-  
+
+  var url3 =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoJtOn5gyW81kWToellszzxWObkGXQQL8m-w&s";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +21,8 @@ class ResimWidgetler extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  width: 300,
-                  height: 300,
+                  width: 200,
+                  height: 200,
                   color: Colors.pink,
                   child: Stack(
                     fit: StackFit.expand,
@@ -38,7 +39,7 @@ class ResimWidgetler extends StatelessWidget {
                                 Text(
                                   "Kayıp kedimizi arıyoruz",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
@@ -46,7 +47,7 @@ class ResimWidgetler extends StatelessWidget {
                                 Text(
                                   "İsim: Mırnav",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
@@ -54,7 +55,7 @@ class ResimWidgetler extends StatelessWidget {
                                 Text(
                                   "Bulanlara ödül verilecektir.",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
@@ -68,19 +69,37 @@ class ResimWidgetler extends StatelessWidget {
                   ),
                 ),
               ),
+              //Expanded(child: Placeholder(color: Colors.pink)),
+              Row(
+                children: [
+                  Expanded(
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage(url3),
+                      radius: 75,
+                    ),
+                  ),
+                  const Expanded(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/Cat03.jpg"),
+                      radius: 75,
+                    ),
+                  ),
+                ],
+              ),
+
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Container(
-                    width: 255,
-                    height: 250,
+                    width: 200,
+                    height: 200,
                     color: Colors.pink,
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
                         Image.network(url, fit: BoxFit.cover),
-                        FadeInImage.assetNetwork(placeholder: "assets/images/cat.jpg", image: url),
 
+                        //FadeInImage.assetNetwork(placeholder: "assets/images/cat.jpg", image: url),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -92,7 +111,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "Kayıp kedimizi arıyoruz",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -100,7 +119,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "İsim:Tombuş",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -108,7 +127,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "Bulanlara ödül verilecektir.",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -127,14 +146,17 @@ class ResimWidgetler extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Container(
-                    width: 255,
-                    height: 250,
+                    width: 200,
+                    height: 200,
                     color: Colors.pink,
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
                         Image.network(url2, fit: BoxFit.cover),
-                        FadeInImage.assetNetwork(placeholder: "assets/images/cat.jpg", image: url2),
+                        FadeInImage.assetNetwork(
+                          placeholder: "assets/images/cat.jpg",
+                          image: url2,
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -146,7 +168,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "Kayıp kedimizi arıyoruz",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -154,7 +176,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "İsim:Pamuk",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -162,7 +184,7 @@ class ResimWidgetler extends StatelessWidget {
                                   Text(
                                     "Bulanlara ödül verilecektir.",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
@@ -179,9 +201,7 @@ class ResimWidgetler extends StatelessWidget {
               ),
             ],
           ),
-        
         ),
-        
       ),
     );
   }
